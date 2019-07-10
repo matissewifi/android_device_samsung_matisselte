@@ -29,8 +29,15 @@ TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1866465280
 
 # Radio
+TARGET_RIL_VARIANT := caf
+BOARD_PROVIDES_LIBRIL := false
+
+# Custom RIL class
+BOARD_RIL_CLASS := ../../../$(DEVICE_PATH)/ril
+
+# Radio
 PRODUCT_PACKAGES += \
-    libril_shim
+libril_shim
 
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
