@@ -48,7 +48,7 @@ PRODUCT_COPY_FILES += \
 
 
 # millet-common
-$(call inherit-product, device/samsung/matisse-common/millet.mk)
+$(call inherit-product, device/samsung/matisse-common/matisse.mk)
 
 DEVICE_HAS_DATELINE := true
 
