@@ -16,11 +16,13 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-# Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/samsung/matisselte/matisselte-vendor.mk)
+LOCAL_PATH := device/samsung/matisselte
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+
+# Get non-open-source specific aspects
+$(call inherit-product-if-exists, vendor/samsung/matisselte/matisselte-vendor.mk)
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
